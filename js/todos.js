@@ -24,13 +24,22 @@ async function fetchDataToDropdown() {
 }
 
 async function displayUserToDos() {
+    displayTodos.innerHTML = "";
     try{
         const response = await fetch("http://localhost:8083/api/todos");
         const data = await response.json();
 
         data.forEach(todo => {
             if(dropdownUsers.value == todo.userid){
-                displayTodos.innerHTML += `${todo.description}<br>`;
+                displayTodos.innerHTML += `
+                <div class="card w-50">
+                    <div class="card-body">
+                        <h5 class="card-title">${todo.category}</h5>
+                        <p class="card-text">${todo.description}</p>
+                        <p class="card-text">Priority: ${todo.priority}</p>
+                    </div>
+                </div>
+                `;
             }
         })
     }
