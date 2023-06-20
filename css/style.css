@@ -1,0 +1,123 @@
+/* ---------- Navbar ---------- */
+.navbar {
+  background-color: #81a867; /* Dark background color */
+  padding: 10px;
+}
+
+/* Navbar brand/logo */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 40px;
+  margin-left: 20px;
+}
+
+/* Navbar toggler */
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff;
+}
+
+/* Navbar links */
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #17a2b8; /* Hover color */
+}
+
+/* Add animation to the navbar links */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-item {
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+/* Add animation to the navbar toggler icon */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navbar-toggler {
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggler.collapsed {
+  transform: rotate(0);
+}
+
+.navbar-toggler:not(.collapsed):hover {
+  transform: rotate(360deg);
+  animation: spin 0.8s infinite linear;
+}
+
+.hero-section {
+  position: relative;
+  height: 500px; /* Adjust the height as needed */
+  background-image: url("your-image.jpg"); /* Replace "your-image.jpg" with your image URL */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.hero-content .cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 4px;
+  background-color: #FFA500; /* Choose your desired button color */
+  color: white;
+  text-decoration: none;
+}
