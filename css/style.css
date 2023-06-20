@@ -6,7 +6,7 @@ body {
 
 /* ---------- Navbar ---------- */
 .navbar {
-  background-color: #81a867; /* Dark background color */
+  background-color: #81a867;
   padding: 10px;
 }
 
@@ -71,14 +71,11 @@ body {
   opacity: 0;
 }
 
-
-
-
-
+/* ---------- Hero Section ---------- */
 .hero-section {
   position: relative;
   height: 500px;
-  background-image: url("../img/hero.webp");
+  background-image: url("../img/hero.jpeg");
   background-size: cover;
   background-position: center;
   color: white;
@@ -135,8 +132,7 @@ body {
   to { transform: translateY(0); opacity: 1; }
 }
 
-
-
+/* ---------- About Section ---------- */
 .about-section {
 	background-color: #c1caba;
 	padding: 50px;
@@ -156,6 +152,7 @@ body {
 	margin-bottom: 20px;
 }
 
+/* ---------- Footer ---------- */
 footer {
   background-color: #333;
   color: #fff;
@@ -191,5 +188,5 @@ footer {
 }
 
 .social-icons li a:hover {
-  color: #ff5500;
+  color: #81a867;
 }
