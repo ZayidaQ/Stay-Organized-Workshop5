@@ -160,3 +160,55 @@ footer {
 .social-icons li a:hover {
   color: #81a867;
 }
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+#displayTodos {
+  margin-top: 20px;
+}
+
+@keyframes fade-in {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.5s ease-in-out;
+}
