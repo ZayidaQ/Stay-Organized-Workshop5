@@ -1,0 +1,125 @@
+</html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  <!-- Add the Font Awesome CSS file -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" href="../css/new_todo.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <a class="navbar-brand" href="#">
+            <img src="../img/logo.png" alt="Logo" class="logo-img">
+          </a>
+          <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./todos.html">My list</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./new_todo.html">New Todo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SignIn / SignUp</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+  <main>
+
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>ToDo</h1>
+      </div>
+    </section>
+
+    <div class="container">
+        <form>
+          <div class="form-group">
+            <label for="dropdown1">Option 1:</label>
+            <select id="dropdown1">
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dropdown2">Option 2:</label>
+            <select id="dropdown2">
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dropdown3">Option 3:</label>
+            <select id="dropdown3">
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+            </select>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+  </main>
+  <footer>
+    <footer>
+      <div class="footer-container">
+        <p>&copy; 2023 i cant think of a way to structure the rest ngl</p>
+        <ul class="social-icons">
+          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+  </footer>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha384-pzD4vEOqnMv6PEXeB0TuzfZPmTrWlNwT7c9Dt0q2tQHe3F00W9dPHIog2LbMv2vC"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+    crossorigin="anonymous"></script>
+
+  <script>
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+
+    navbarToggler.addEventListener('click', function () {
+      navbarCollapse.classList.toggle('show');
+    });
+  </script>
+
+</body>
+
+</html>
