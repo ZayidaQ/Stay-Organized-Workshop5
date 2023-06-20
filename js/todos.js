@@ -13,6 +13,7 @@ async function fetchDataToDropdown() {
     try{
         const response = await fetch("http://localhost:8083/api/users");
         const data = await response.json();
+        dropdownUsers.appendChild(new Option("Select a user"));
         data.forEach(user => {
             dropdownUsers.appendChild(new Option(user.username, user.id));
         })
