@@ -61,5 +61,4 @@ myForm.addEventListener("submit",
     const data = await response.json();
     console.log(data);
     myForm.reset();
-    alert('Submitted!');
 });
