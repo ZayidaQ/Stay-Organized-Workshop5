@@ -32,17 +32,16 @@ async function displayUserToDos() {
         data.forEach(todo => {
             if (dropdownUsers.value == todo.userid) {
                 displayTodos.innerHTML += `
-                    <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">${todo.category}</h5>
-                        <p class="card-text">${todo.description}</p>
-                        <p class="card-text">Priority: ${todo.priority}</p>
-                        <label>
+                <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">${todo.category}</h5>
+                  <p class="card-text">${todo.description}</p>
+                  <p class="card-text">Priority: ${todo.priority}</p>
+                  <label class="checkbox-label">
                     <input type="checkbox" class="form-check-input">
-                        Completed
-                    </label>
-                    </div>
-                    </div>
+                  </label>
+                </div>
+              </div>
                     `;
 
             }
