@@ -10,7 +10,7 @@ window.onload = () => {
 }
 
 async function fetchDataToDropdown() {
-    try{
+    try {
         const response = await fetch("http://localhost:8083/api/users");
         const data = await response.json();
         dropdownUsers.appendChild(new Option("Select a user"));
@@ -18,32 +18,37 @@ async function fetchDataToDropdown() {
             dropdownUsers.appendChild(new Option(user.username, user.id));
         })
     }
-    catch(error){
+    catch (error) {
         displayTodos.innerHTML = `Error: ${error}`;
     }
 }
 
 async function displayUserToDos() {
     displayTodos.innerHTML = "";
-    try{
+    try {
         const response = await fetch("http://localhost:8083/api/todos");
         const data = await response.json();
 
         data.forEach(todo => {
-            if(dropdownUsers.value == todo.userid){
+            if (dropdownUsers.value == todo.userid) {
                 displayTodos.innerHTML += `
-                <div class="card w-50">
+                    <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">${todo.category}</h5>
                         <p class="card-text">${todo.description}</p>
                         <p class="card-text">Priority: ${todo.priority}</p>
+                        <label>
+                    <input type="checkbox" class="form-check-input">
+                        Completed
+                    </label>
                     </div>
-                </div>
-                `;
+                    </div>
+                    `;
+
             }
         })
     }
-    catch(error){
+    catch (error) {
         displayTodos.innerHTML = `Error: ${error}`;
     }
 }
