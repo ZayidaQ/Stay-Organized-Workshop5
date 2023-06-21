@@ -1,5 +1,6 @@
 "use strict"
 
+const myForm = document.querySelector("#formAddToDo");
 const dropdownUsers = document.querySelector("#dropdownUsers");
 const dropdownCategories = document.querySelector("#dropdownCategories");
 const dropdownPriority = document.querySelector("#dropdownPriority");
@@ -39,7 +40,7 @@ async function populateCategoriesDropdown() {
     }
 }
 
-document.querySelector("#formAddToDo").addEventListener("submit", 
+myForm.addEventListener("submit", 
     async function(event){
     event.preventDefault();
 
@@ -59,4 +60,5 @@ document.querySelector("#formAddToDo").addEventListener("submit",
     });
     const data = await response.json();
     console.log(data);
+    myForm.reset();
 });
